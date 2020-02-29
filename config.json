@@ -1,0 +1,34 @@
+{
+  "inbounds": [{
+    "port": 1080,
+    "protocol": "socks",
+    "sniffing": {
+	"enable": true,
+	"destOverride": ["http", "tls"]
+    },
+    "settings": {
+        "auth": "noauth",
+    	"udp": true
+    }
+  }],
+  "outbounds": [{
+    "protocol": "vmess",
+    "settings": {
+	    "vnext": [{
+		    "address": "goforfreerzx.xyz",
+		    "port": 443,
+		    "users": [{
+			    "id": "5c7b2b66-c8f9-4855-8ae5-abbade74f3f4",
+		    	    "alterId": 64
+		    }]
+		}]
+    },
+    "streamSettings": {
+	    "network": "ws",
+	    "security": "tls",
+	    "wsSettings": {
+		    "path": "/awesomepath"
+	    }
+    }
+  }]
+}
